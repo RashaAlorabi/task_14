@@ -1,8 +1,7 @@
-from django.db import models
-from rest_framework import routers, serializers, viewsets
+from rest_framework import serializers
 from restaurants.models import Restaurant
 # Create your models here.
 class RestaurantListSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Restaurant
-		fields = '__all__'
+		fields = ['name','opening_time','closing_time']
